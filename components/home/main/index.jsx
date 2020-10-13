@@ -22,7 +22,13 @@ export default class Main extends Component {
                 Negociei na maior plataforma de criptomoedas, ativos digitais e
                 outros investimentos alternativos do Brasil.
               </p>
-              <Button variant="contained">Abra sua conta grátis</Button>
+              <Button
+                className={styles.buttonCustom}
+                variant="contained"
+                href="home/register"
+              >
+                Abra sua conta grátis
+              </Button>
               <img src="./img/criptomoeadas.png" />
             </div>
           </section>

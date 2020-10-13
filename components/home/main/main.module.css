@@ -85,7 +85,7 @@
   text-align: left;
 }
 
-.sectionDetail button {
+.sectionDetail .buttonCustom {
   margin-top: 0.9rem;
   min-height: 40px;
   min-width: 200px;

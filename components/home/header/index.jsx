@@ -10,27 +10,27 @@ export default class header extends React.Component {
         <nav className={styles.navLeft}>
           <ul>
             <li className={styles.link}>
-              <a href="/pages/sobre">
+              <a href="/home/sobre">
                 <h6>Sobre</h6>
               </a>
             </li>
             <li className={styles.link}>
-              <a href="/pages/investimentos">
+              <a href="/home/investimentos">
                 <h6>Investimentos</h6>
               </a>
             </li>
             <li className={styles.link}>
-              <a href="/pages/servicos">
+              <a href="/home/servicos">
                 <h6>Serviços</h6>
               </a>
             </li>
             <li className={styles.link}>
-              <a href="/pages/planos-e-promocoes">
+              <a href="/home/planos-e-promocoes">
                 <h6>Planos e Promoções</h6>
               </a>
             </li>
             <li className={classNames(styles.homeBroker, styles.esquerda)}>
-              <a href="/pages/home-broker">
+              <a href="/home/homebroker">
                 <h6>Home Broker</h6>
               </a>
             </li>
@@ -43,7 +43,7 @@ export default class header extends React.Component {
               <Help color="disabled" fontSize="small" />
             </li>
             <li className={styles.link}>
-              <a href="/pages/sobre">
+              <a href="/home/atendimento">
                 <small>Atendimento</small>
               </a>
             </li>
@@ -53,12 +53,18 @@ export default class header extends React.Component {
               </a>
             </li>
             <li className={styles.link}>
-              <a href="/pages/investimentos">
+              <a href="/home/login">
                 <small>Login</small>
               </a>
             </li>
 
-            <Button variant="contained">Abra sua conta</Button>
+            <Button
+              className={styles.buttonCustom}
+              variant="contained"
+              href="/home/register"
+            >
+              Abra sua conta
+            </Button>
           </ul>
         </nav>
       </header>

@@ -6,7 +6,7 @@ export default class Footer extends Component {
   render() {
     return (
       <footer className={styles.footer}>
-        <img src="./img/icon.png" />
+        <img src="/img/icon.png" />
       </footer>
     );
   }

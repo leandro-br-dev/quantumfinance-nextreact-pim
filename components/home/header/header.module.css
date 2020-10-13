@@ -50,7 +50,7 @@
   text-decoration-line: underline;
 }
 
-.header button {
+.header .buttonCustom {
   margin-top: 0rem;
   min-height: 40px;
   min-width: 200px;
