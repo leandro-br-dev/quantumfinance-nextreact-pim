@@ -25,7 +25,7 @@ export default class Main extends Component {
               <Button
                 className={styles.buttonCustom}
                 variant="contained"
-                href="home/register"
+                href="home/cadastro"
               >
                 Abra sua conta grátis
               </Button>

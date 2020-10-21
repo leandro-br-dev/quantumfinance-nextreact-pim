@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import styles from './register.module.css';
-import FormRegister from '../../../components/home/form-registrer';
+import styles from './cadastro.module.css';
+
+import FormCadastro from '../../../components/home/form-cadastro-parte1';
 
 import Head from 'next/head';
 import Header from '../../../components/home/header';
@@ -18,7 +19,7 @@ export default class Register extends Component {
 
         <Header />
 
-        <FormRegister />
+        <FormCadastro />
         <Footer />
       </div>
     );

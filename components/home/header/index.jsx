@@ -61,7 +61,7 @@ export default class header extends React.Component {
             <Button
               className={styles.buttonCustom}
               variant="contained"
-              href="/home/register"
+              href="/home/cadastro"
             >
               Abra sua conta
             </Button>

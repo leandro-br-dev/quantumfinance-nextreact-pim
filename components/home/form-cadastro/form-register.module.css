@@ -68,3 +68,33 @@
 .invisible {
   display: none;
 }
+
+.formGroup:hover .inputForms {
+  border-bottom: solid 2px rgb(60, 60, 194);
+  place-items: none;
+}
+
+.inputForms {
+  margin: 1rem 0 1rem 0;
+  border: none;
+  border-bottom: solid 1px gray;
+  transition: all 1s;
+
+  font-size: medium;
+}
+
+.inputForms:focus + .floatingLabel {
+  color: red;
+}
+
+.inputForms:focus::placeholder {
+  transition: all 0.5s;
+  color: transparent;
+}
+
+.floatingLabel {
+  color: black;
+  left: 20px;
+  top: 18px;
+  transition: 1s ease all;
+}
