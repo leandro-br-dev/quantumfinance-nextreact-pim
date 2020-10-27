@@ -46,17 +46,17 @@
 }
 
 .containerFooter {
-  margin: 50px;
+  margin-top: 50px;
   width: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-items: flex-end;
 }
 
 .containerFooter .buttonCustom {
   margin-top: 0rem;
   min-height: 40px;
-  min-width: 200px;
+  min-width: 180px;
 
   background-color: var(--blue-600);
 
@@ -69,32 +69,33 @@
   display: none;
 }
 
-.formGroup:hover .inputForms {
-  border-bottom: solid 2px rgb(60, 60, 194);
-  place-items: none;
+.cidadeUF{
+  display: flex;
+  flex-direction: row;
 }
 
-.inputForms {
-  margin: 1rem 0 1rem 0;
-  border: none;
-  border-bottom: solid 1px gray;
-  transition: all 1s;
-
-  font-size: medium;
+.inputCidade {
+  width: 280px;
 }
 
-.inputForms:focus + .floatingLabel {
-  color: red;
+.selectUF{
+  margin-left: 25px;
+  width: 100px;
 }
 
-.inputForms:focus::placeholder {
-  transition: all 0.5s;
-  color: transparent;
+.containerFooter .buttonRetornar{
+  margin-top: 0rem;
+  min-height: 40px;
+  min-width: 180px;
+  margin: 0 1rem 0 1rem;
+  
+  background-color: var(--green-500);
+  color: var(--white);
+  font-weight: 700;
+  text-transform: uppercase;
+
 }
 
-.floatingLabel {
-  color: black;
-  left: 20px;
-  top: 18px;
-  transition: 1s ease all;
+.inputPassword{
+  margin: 0 1rem 0 1rem;
 }

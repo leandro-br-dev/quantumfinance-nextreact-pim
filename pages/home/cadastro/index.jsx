@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './cadastro.module.css';
 
-import FormCadastro from '../../../components/home/form-cadastro-parte1';
+import FormCadastro from '../../../components/home/form-cadastro';
 
 import Head from 'next/head';
 import Header from '../../../components/home/header';
