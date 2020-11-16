@@ -9,17 +9,6 @@
   align-items: center;
 }
 
-.sectionLogo {
-  width: 100%;
-  height: auto;
-  background-color: var(--powder-900);
-
-  display: flex;
-  justify-items: center;
-
-  padding: 5px;
-}
-
 .container {
   margin-top: 10px;
 
@@ -98,4 +87,8 @@
 
 .inputPassword{
   margin: 0 1rem 0 1rem;
+}
+
+.erro{
+  color: var(--red-500);
 }

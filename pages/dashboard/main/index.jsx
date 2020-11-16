@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import styles from './cadastro.module.css';
-
-import FormCadastro from '../../../components/home/form-cadastro';
+import styles from './main.module.css';
 
 import Head from 'next/head';
-import Header from '../../../components/home/header';
-import Title from '../../../components/home/title';
-import Footer from '../../../components/home/footer';
+import Header from '../../../components/dashboard/header';
+import Sidebar from '../../../components/dashboard/sidebar';
+import Title from '../../../components/dashboard/title';
 
 export default class Register extends Component {
 	state = {};
@@ -19,10 +17,8 @@ export default class Register extends Component {
 				</Head>
 
 				<Header />
+				<Sidebar />
 				<Title />
-
-				<FormCadastro />
-				<Footer />
 			</div>
 		);
 	}

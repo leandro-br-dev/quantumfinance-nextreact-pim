@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Router from 'next/router';
 import styles from './form-register.module.css';
 import { TextField, Button, FormControl, Input, InputLabel, Select, MenuItem } from '@material-ui/core/';
 
@@ -31,9 +32,6 @@ export default class FormRegister extends Component {
 	render() {
 		return (
 			<main className={styles.main}>
-				<section className={styles.sectionLogo}>
-					<img src="../../img/logo-2.png" />
-				</section>
 				<div className={styles.container}>
 					<section className={cn(styles.sectionForm, this.state.activeForm ? styles.invisible : null)}>
 						<h3 className={this.classForms}>Dados Pessoais / Empresariais</h3>
@@ -225,6 +223,7 @@ export default class FormRegister extends Component {
 								</FormControl>
 							</div>
 							<br />
+							<span className={styles.erro}>{this.state.erro}</span>
 							<br />
 							<div className={styles.containerFooter}>
 								<Button
@@ -270,25 +269,27 @@ export default class FormRegister extends Component {
 	}
 
 	handleSubmit = (event) => {
-		fetch('http://localhost:3003/sistema/clientes', {
+		console.log(JSON.stringify(this.state.clients));
+		fetch('http://localhost:3003/clientes', {
 			method: 'post',
 			body: JSON.stringify(this.state.clients),
 			headers: {
 				'Content-Type': 'application/json'
 			}
-		})
-			.then((data) => {
-				if (data.ok) {
-					this.setState({ redirect: true });
-				} else {
-					data.json().then((data) => {
-						if (data.error) {
-							this.setState({ erro: data.error });
-						}
-					});
-				}
-			})
-			.catch((erro) => this.setState({ erro: erro }));
+		}).then((response) => {
+			if (response.status === 200) {
+				response.json().then((json) => {
+					if (json != null) {
+						localStorage.setItem('id', json.id);
+						localStorage.setItem('nome', json.nome);
+						localStorage.setItem('login', true);
+						Router.push('/dashboard/main');
+					}
+				});
+			} else {
+				this.setState({ erro: 'CPF/CNPJ ou e-mail já utilizado em outro cadastro.' });
+			}
+		});
 
 		event.preventDefault();
 	};
